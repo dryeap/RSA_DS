@@ -223,7 +223,7 @@ if 'decrypted_msg' not in st.session_state:
 if 'digital_signature' not in st.session_state:
     st.session_state.digital_signature = None
 if 'message_for_signature' not in st.session_state:
-    st.session_state.message_for_signature = "Ini adalah pesan untuk ditandatangani secara digital."
+    st.session_state.message_for_signature = "This is a message to be digitally signed."
 
 
 st.sidebar.header("Navigation")
@@ -263,7 +263,7 @@ elif page == "2. Encryption":
 
         message_to_encrypt = st.text_area(
             "Plaintext Message",
-            st.session_state.original_msg if st.session_state.original_msg else "Halo, ini adalah pesan rahasia dari Matematika Diskrit!",
+            st.session_state.original_msg if st.session_state.original_msg else "My password is aloha123!",
             height=100
         )
         st.session_state.original_msg = message_to_encrypt # Update original_msg in session state
